@@ -1,0 +1,250 @@
+
+.main{
+    margin: 80px auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Kartu Postingan */
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Bagian atas postingan */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Gambar Profil */
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+/* Informasi Post */
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Teks artikel */
+.post-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Bagian bawah postingan (ikon komentar) */
+.post-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.comment-icon {
+    font-size: 15px;
+    color: #007bff;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff00;
+}
+
+.comment-section {
+    margin-top: 10px;
+    display: none;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.comment-content {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.comment-content strong {
+    color: #333;
+}
+
+.comment-content p {
+    margin: 5px 0;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* Pesan sukses */
+.pesan-success {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Pesan error */
+.pesan-error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-komentar{
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.edit-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10000;
+}
+
+.modal-overlay.show,
+.edit-modal.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Konten Modal */
+.modal-content {
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol */
+.modal-content button {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.modal-content button[type="submit"] {
+    background: #007bff;
+    color: white;
+}
+/* Tombol close */
+.close-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.blog-kosong{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Sesuaikan tinggi agar pas */
+    font-size: 24px;
+    font-weight: bold;
+    color: #888; /* Warna abu-abu agar lebih soft */
+}

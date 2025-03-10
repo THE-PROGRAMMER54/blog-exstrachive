@@ -1,0 +1,85 @@
+/* Styling container utama */
+.profile-photo-section {
+    text-align: center;
+    max-width: 300px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling foto profil */
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d1d5db;
+}
+
+/* Styling tombol */
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Warna tombol */
+.upload-btn {
+    background: #007bff;
+    color: white;
+}
+
+.submit-btn {
+    display: none;
+    background: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background: gray;
+    color: white;
+}
+
+/* Hover efek */
+.upload-btn:hover {
+    background: #0056b3;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+.cancel-btn:hover {
+    background: darkgray;
+}
+
+/* Sembunyikan input file */
+#photo-input {
+    display: none;
+}
+
+/* Pesan error */
+.pesan-error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
