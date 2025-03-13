@@ -21,7 +21,11 @@
                 <i class="ph ph-camera photo-icon" id="open-menu"></i>
             </div>
             <div class="menu-popup" id="photo-menu">
-                <a class="menu-item" href="{{ route('fotoProfile') }}">Ganti Foto</a>
+                <form action="{{ route('uploadgambar') }}" method="POST" id="form" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" id="pilih-gambar" name="gambar" hidden>
+                    <button type="button" class="menu-item" id="kirimgambar">Upload Foto</button>
+                </form>
                 @if ($user->gambar !== "profile.jpeg")
                 <form action="{{ route("deleteprofile",$user->id) }}" method="post">
                     @csrf
@@ -129,6 +133,32 @@
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM Loaded. Mencari elemen...");
+
+    const fileInput = document.getElementById("pilih-gambar");
+    const uploadForm = document.getElementById("form");
+    const uploadBtn = document.getElementById("kirimgambar");
+
+    if (!fileInput || !uploadBtn || !uploadForm) {
+        console.error("❌ Input file, tombol upload, atau form tidak ditemukan!");
+        return;
+    }
+
+    // Ketika tombol upload diklik, buka file input
+    uploadBtn.addEventListener("click", function () {
+        console.log("Tombol upload diklik");
+        fileInput.click();
+    });
+
+    // Ketika file dipilih, otomatis submit form
+    fileInput.addEventListener("change", function () {
+        if (this.files.length > 0) {
+            console.log("File dipilih:", this.files[0].name);
+            uploadForm.submit();
+        }
+    });
+});
 </script>
 {{-- script phosphor-icons --}}
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
